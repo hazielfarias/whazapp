@@ -12,6 +12,8 @@
 		3129218E230300AB00322256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3129218C230300AB00322256 /* Main.storyboard */; };
 		31292190230300AC00322256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3129218F230300AC00322256 /* Assets.xcassets */; };
 		31292193230300AC00322256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31292191230300AC00322256 /* LaunchScreen.storyboard */; };
+		3129219B230301A200322256 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3129219A230301A200322256 /* GoogleService-Info.plist */; };
+		73618574040B6469B7DDA0AF /* Pods_wHazApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91BF0BBC54BD925B64A6E5C /* Pods_wHazApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		3129218F230300AC00322256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31292192230300AC00322256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31292194230300AC00322256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3129219A230301A200322256 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BA6E03A6EF206B56F7BC1AB /* Pods-wHazApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wHazApp.release.xcconfig"; path = "Target Support Files/Pods-wHazApp/Pods-wHazApp.release.xcconfig"; sourceTree = "<group>"; };
+		B8D83C3F0C1BA92C83455448 /* Pods-wHazApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wHazApp.debug.xcconfig"; path = "Target Support Files/Pods-wHazApp/Pods-wHazApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F91BF0BBC54BD925B64A6E5C /* Pods_wHazApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wHazApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73618574040B6469B7DDA0AF /* Pods_wHazApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E25D5F1C7132A6C0DA120CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8D83C3F0C1BA92C83455448 /* Pods-wHazApp.debug.xcconfig */,
+				8BA6E03A6EF206B56F7BC1AB /* Pods-wHazApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3129217C230300AB00322256 = {
 			isa = PBXGroup;
 			children = (
 				31292187230300AB00322256 /* wHazApp */,
 				31292186230300AB00322256 /* Products */,
+				1E25D5F1C7132A6C0DA120CC /* Pods */,
+				87388CF8D12640D428384DFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +79,17 @@
 				3129218F230300AC00322256 /* Assets.xcassets */,
 				31292191230300AC00322256 /* LaunchScreen.storyboard */,
 				31292194230300AC00322256 /* Info.plist */,
+				3129219A230301A200322256 /* GoogleService-Info.plist */,
 			);
 			path = wHazApp;
+			sourceTree = "<group>";
+		};
+		87388CF8D12640D428384DFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F91BF0BBC54BD925B64A6E5C /* Pods_wHazApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31292197230300AC00322256 /* Build configuration list for PBXNativeTarget "wHazApp" */;
 			buildPhases = (
+				784EDAEF7629D8B01C531AD2 /* [CP] Check Pods Manifest.lock */,
 				31292181230300AB00322256 /* Sources */,
 				31292182230300AB00322256 /* Frameworks */,
 				31292183230300AB00322256 /* Resources */,
+				7AECB9A3DC10C545B80FBC39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,12 +153,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				31292193230300AC00322256 /* LaunchScreen.storyboard in Resources */,
+				3129219B230301A200322256 /* GoogleService-Info.plist in Resources */,
 				31292190230300AC00322256 /* Assets.xcassets in Resources */,
 				3129218E230300AB00322256 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		784EDAEF7629D8B01C531AD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wHazApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AECB9A3DC10C545B80FBC39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wHazApp/Pods-wHazApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wHazApp/Pods-wHazApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wHazApp/Pods-wHazApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31292181230300AB00322256 /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		31292198230300AC00322256 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D83C3F0C1BA92C83455448 /* Pods-wHazApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		31292199230300AC00322256 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA6E03A6EF206B56F7BC1AB /* Pods-wHazApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

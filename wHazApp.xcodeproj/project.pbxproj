@@ -3,28 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		31292189230300AB00322256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31292188230300AB00322256 /* AppDelegate.swift */; };
-		3129218B230300AB00322256 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129218A230300AB00322256 /* ViewController.swift */; };
 		3129218E230300AB00322256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3129218C230300AB00322256 /* Main.storyboard */; };
 		31292190230300AC00322256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3129218F230300AC00322256 /* Assets.xcassets */; };
 		31292193230300AC00322256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31292191230300AC00322256 /* LaunchScreen.storyboard */; };
 		3129219B230301A200322256 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3129219A230301A200322256 /* GoogleService-Info.plist */; };
-		73618574040B6469B7DDA0AF /* Pods_wHazApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91BF0BBC54BD925B64A6E5C /* Pods_wHazApp.framework */; };
+		319B11682304462C009FD900 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B11672304462C009FD900 /* LoginViewController.swift */; };
+		319B116A23044655009FD900 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B116923044655009FD900 /* CadastroViewController.swift */; };
+		319B116D230486AE009FD900 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B116C230486AE009FD900 /* AjustesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31292185230300AB00322256 /* wHazApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wHazApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31292188230300AB00322256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3129218A230300AB00322256 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3129218D230300AB00322256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3129218F230300AC00322256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31292192230300AC00322256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31292194230300AC00322256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3129219A230301A200322256 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		319B11672304462C009FD900 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		319B116923044655009FD900 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		319B116C230486AE009FD900 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
 		8BA6E03A6EF206B56F7BC1AB /* Pods-wHazApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wHazApp.release.xcconfig"; path = "Target Support Files/Pods-wHazApp/Pods-wHazApp.release.xcconfig"; sourceTree = "<group>"; };
 		B8D83C3F0C1BA92C83455448 /* Pods-wHazApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wHazApp.debug.xcconfig"; path = "Target Support Files/Pods-wHazApp/Pods-wHazApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F91BF0BBC54BD925B64A6E5C /* Pods_wHazApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wHazApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73618574040B6469B7DDA0AF /* Pods_wHazApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,7 +50,6 @@
 				B8D83C3F0C1BA92C83455448 /* Pods-wHazApp.debug.xcconfig */,
 				8BA6E03A6EF206B56F7BC1AB /* Pods-wHazApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,8 +74,9 @@
 		31292187230300AB00322256 /* wHazApp */ = {
 			isa = PBXGroup;
 			children = (
+				319B1166230445EC009FD900 /* ViewController */,
+				319B1165230445D0009FD900 /* Model */,
 				31292188230300AB00322256 /* AppDelegate.swift */,
-				3129218A230300AB00322256 /* ViewController.swift */,
 				3129218C230300AB00322256 /* Main.storyboard */,
 				3129218F230300AC00322256 /* Assets.xcassets */,
 				31292191230300AC00322256 /* LaunchScreen.storyboard */,
@@ -82,6 +84,31 @@
 				3129219A230301A200322256 /* GoogleService-Info.plist */,
 			);
 			path = wHazApp;
+			sourceTree = "<group>";
+		};
+		319B1165230445D0009FD900 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		319B1166230445EC009FD900 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				319B116B230486A0009FD900 /* tabs */,
+				319B11672304462C009FD900 /* LoginViewController.swift */,
+				319B116923044655009FD900 /* CadastroViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		319B116B230486A0009FD900 /* tabs */ = {
+			isa = PBXGroup;
+			children = (
+				319B116C230486AE009FD900 /* AjustesViewController.swift */,
+			);
+			path = tabs;
 			sourceTree = "<group>";
 		};
 		87388CF8D12640D428384DFB /* Frameworks */ = {
@@ -208,7 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3129218B230300AB00322256 /* ViewController.swift in Sources */,
+				319B116D230486AE009FD900 /* AjustesViewController.swift in Sources */,
+				319B11682304462C009FD900 /* LoginViewController.swift in Sources */,
+				319B116A23044655009FD900 /* CadastroViewController.swift in Sources */,
 				31292189230300AB00322256 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93JXUPK2SQ;
 				INFOPLIST_FILE = wHazApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,6 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93JXUPK2SQ;
 				INFOPLIST_FILE = wHazApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

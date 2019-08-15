@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class CadastroViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class CadastroViewController: UIViewController {
     @IBOutlet weak var scrollPrincipal: UIScrollView!
     
     var auth: Auth!
+    var database: Database!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class CadastroViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(diminuirScroll(notification:)), name: UIResponder.keyboardWillHideNotification , object: nil)
         
         self.auth = Auth.auth()
+        self.database = Database.database()
     }
     
     @IBAction func cadastrar(_ sender: Any) {
@@ -35,6 +38,16 @@ class CadastroViewController: UIViewController {
                     
                     self.auth.createUser(withEmail: email, password: senha, completion: {(usuario, erro) in
                         if erro == nil{
+                            
+                            var usuario: Dictionary<String, String> = [:]
+                            usuario["email"] = email
+                            usuario["nome"] = nome
+                            
+                            let chave = Base64().codificarStringBase64(texto: email)
+                            
+                            let usuarios = self.database.reference().child("usuarios")
+                            usuarios.child(chave).setValue(usuario)
+                            
                             print("Sucesso ao cadastrar usuário")
                             self.navigationController?.popViewController(animated: true)
                         }else{

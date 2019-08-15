@@ -218,7 +218,7 @@
             </objects>
             <point key="canvasLocation" x="1764" y="443"/>
         </scene>
-        <!--Contatos-->
+        <!--Contacts-->
         <scene sceneID="4ad-Pz-OxM">
             <objects>
                 <viewController id="t8j-cG-bcn" sceneMemberID="viewController">
@@ -228,11 +228,11 @@
                         <color key="backgroundColor" red="0.24705882352941178" green="0.32156862745098036" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="iby-WW-oV1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contatos" image="contatos" id="JbI-6W-7kO"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="FFb-OM-qR1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbq-T9-YGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2844" y="-1165"/>
+            <point key="canvasLocation" x="4536" y="-1165"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ng7-Ml-fOb">
@@ -244,16 +244,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="IeN-Wq-RRP" kind="relationship" relationship="viewControllers" id="DNc-w8-x8D"/>
-                        <segue destination="t8j-cG-bcn" kind="relationship" relationship="viewControllers" id="ZvL-Q1-7oh"/>
-                        <segue destination="npz-1T-Tpv" kind="relationship" relationship="viewControllers" id="ibc-In-eyc"/>
+                        <segue destination="mMe-n9-FGA" kind="relationship" relationship="viewControllers" id="DNc-w8-x8D"/>
+                        <segue destination="6wS-Sk-qcG" kind="relationship" relationship="viewControllers" id="ZvL-Q1-7oh"/>
+                        <segue destination="YRl-Ir-jLa" kind="relationship" relationship="viewControllers" id="ibc-In-eyc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwB-gS-t8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1763" y="-356"/>
         </scene>
-        <!--Ajustes-->
+        <!--Settings-->
         <scene sceneID="lSj-ig-5ei">
             <objects>
                 <viewController id="npz-1T-Tpv" customClass="AjustesViewController" customModule="wHazApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -262,29 +262,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-ff-XkB">
-                                <rect key="frame" x="83.5" y="254" width="153" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Deslogar"/>
+                                <rect key="frame" x="122" y="472" width="76" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="deslogar:" destination="npz-1T-Tpv" eventType="touchUpInside" id="HVk-B7-3Ce"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5AU-XS-8Wd">
+                                <rect key="frame" x="15" y="79" width="290" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="79K-S2-nFF">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="150"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-NX-94X">
+                                        <rect key="frame" x="150" y="0.0" width="140" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxx-fD-8Ps">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="128"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykH-N8-9Mo">
+                                                <rect key="frame" x="0.0" y="133" width="140" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sxx-fD-8Ps" firstAttribute="leading" secondItem="8c9-NX-94X" secondAttribute="leading" id="KNB-Z5-z25"/>
+                                            <constraint firstItem="ykH-N8-9Mo" firstAttribute="leading" secondItem="8c9-NX-94X" secondAttribute="leading" id="Pae-tQ-wiG"/>
+                                            <constraint firstAttribute="trailing" secondItem="sxx-fD-8Ps" secondAttribute="trailing" id="YA5-oB-A7X"/>
+                                            <constraint firstAttribute="trailing" secondItem="ykH-N8-9Mo" secondAttribute="trailing" id="eaD-gT-Gxm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="BgJ-0f-GdL"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.24705882352941178" green="0.32156862745098036" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="uZ1-ff-XkB" firstAttribute="centerY" secondItem="zJz-Tg-pJJ" secondAttribute="centerY" id="0Ag-ey-zH8"/>
-                            <constraint firstItem="uZ1-ff-XkB" firstAttribute="centerX" secondItem="zJz-Tg-pJJ" secondAttribute="centerX" id="Sbi-x8-r6S"/>
+                            <constraint firstItem="5AU-XS-8Wd" firstAttribute="leading" secondItem="Tfu-Fy-WPY" secondAttribute="leading" constant="15" id="D41-bc-zf8"/>
+                            <constraint firstItem="uZ1-ff-XkB" firstAttribute="centerX" secondItem="zJz-Tg-pJJ" secondAttribute="centerX" id="DVd-79-eSF"/>
+                            <constraint firstItem="Tfu-Fy-WPY" firstAttribute="trailing" secondItem="5AU-XS-8Wd" secondAttribute="trailing" constant="15" id="IE5-8h-oYM"/>
+                            <constraint firstItem="5AU-XS-8Wd" firstAttribute="top" secondItem="Tfu-Fy-WPY" secondAttribute="top" constant="15" id="V40-hT-QQ7"/>
+                            <constraint firstItem="Tfu-Fy-WPY" firstAttribute="bottom" secondItem="uZ1-ff-XkB" secondAttribute="bottom" constant="5" id="nlt-rQ-KOU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tfu-Fy-WPY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ajustes" image="ajustes" id="Np7-eK-GKs"/>
+                    <navigationItem key="navigationItem" title="Settings" id="t4s-MK-lRf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7a-Pm-EOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846" y="-357"/>
+            <point key="canvasLocation" x="3841.875" y="-357.04225352112678"/>
         </scene>
-        <!--Conversas-->
+        <!--Conversations-->
         <scene sceneID="cpO-SP-ZaX">
             <objects>
                 <viewController id="IeN-Wq-RRP" sceneMemberID="viewController">
@@ -294,11 +333,68 @@
                         <color key="backgroundColor" red="0.24705882352941178" green="0.32156862745098036" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dlx-Ir-rOR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Conversas" image="conversas" id="CjW-5d-gzG"/>
+                    <navigationItem key="navigationItem" title="Conversations" id="qBA-8r-9jz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIG-XY-pql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="-1165"/>
+            <point key="canvasLocation" x="2563" y="-1165"/>
+        </scene>
+        <!--Conversations-->
+        <scene sceneID="0X9-jz-QAn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mMe-n9-FGA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conversations" image="conversas" id="CjW-5d-gzG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ay-Eo-MCC">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IeN-Wq-RRP" kind="relationship" relationship="rootViewController" id="mVY-Gf-akH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPc-WS-92P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="-1165"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="aFo-rl-SU9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6wS-Sk-qcG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contacts" image="contatos" id="JbI-6W-7kO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o68-il-1G7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="t8j-cG-bcn" kind="relationship" relationship="rootViewController" id="Hai-ST-ztl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0A-CE-jHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3739" y="-1165"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="qcl-dW-nCX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YRl-Ir-jLa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="ajustes" id="Np7-eK-GKs"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="la6-9u-okD">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="npz-1T-Tpv" kind="relationship" relationship="rootViewController" id="VVU-G4-kdn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nrh-mE-CrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3030" y="-357"/>
         </scene>
     </scenes>
     <resources>

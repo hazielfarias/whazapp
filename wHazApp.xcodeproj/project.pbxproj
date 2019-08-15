@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311C0004230599F100FA9771 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311C0003230599F100FA9771 /* Base64.swift */; };
 		31292189230300AB00322256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31292188230300AB00322256 /* AppDelegate.swift */; };
 		3129218E230300AB00322256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3129218C230300AB00322256 /* Main.storyboard */; };
 		31292190230300AC00322256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3129218F230300AC00322256 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		311C0003230599F100FA9771 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		31292185230300AB00322256 /* wHazApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wHazApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31292188230300AB00322256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3129218D230300AB00322256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		311C0002230599CC00FA9771 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				311C0003230599F100FA9771 /* Base64.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		3129217C230300AB00322256 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		31292187230300AB00322256 /* wHazApp */ = {
 			isa = PBXGroup;
 			children = (
+				311C0002230599CC00FA9771 /* Helper */,
 				319B1166230445EC009FD900 /* ViewController */,
 				319B1165230445D0009FD900 /* Model */,
 				31292188230300AB00322256 /* AppDelegate.swift */,
@@ -238,6 +249,7 @@
 				319B116D230486AE009FD900 /* AjustesViewController.swift in Sources */,
 				319B11682304462C009FD900 /* LoginViewController.swift in Sources */,
 				319B116A23044655009FD900 /* CadastroViewController.swift in Sources */,
+				311C0004230599F100FA9771 /* Base64.swift in Sources */,
 				31292189230300AB00322256 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

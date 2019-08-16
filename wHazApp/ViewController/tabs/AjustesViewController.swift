@@ -9,9 +9,14 @@
 import UIKit
 import FirebaseAuth
 
-class AjustesViewController: UIViewController {
+class AjustesViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    @IBOutlet weak var imagem: UIImageView!
+    @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var email: UILabel!
+    
     var auth: Auth!
+    var imagePicker = UIImagePickerController()
     
     @IBAction func deslogar(_ sender: Any) {
         self.auth = Auth.auth()
@@ -25,11 +30,22 @@ class AjustesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func alterarImagem(_ sender: Any) {
+        imagePicker.sourceType = .savedPhotosAlbum
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let imagemRecuperada = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        self.imagem.image = imagemRecuperada
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

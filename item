@@ -1,0 +1,44 @@
+import java.awt.Robot;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.util.Random;
+
+public class RunMain {
+    public static void main(String[] args) {
+        try {
+            Robot robot = new Robot();
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+            Random random = new Random();
+            long moveDuration = 2000;
+            int steps = 100;
+            long stepDelay = moveDuration / steps;
+
+            while (true) {
+                Point start = MouseInfo.getPointerInfo().getLocation();
+                int startX = (int) start.getX();
+                int startY = (int) start.getY();
+                int endX = random.nextInt((int) screenSize.getWidth());
+                int endY = random.nextInt((int) screenSize.getHeight());
+
+                for (int i = 0; i <= steps; i++) {
+                    double progress = (double) i / steps;
+                    int x = (int) (startX + progress * (endX - startX));
+                    int y = (int) (startY + progress * (endY - startY));
+                    robot.mouseMove(x, y);
+                    Thread.sleep(stepDelay);
+                }
+
+                int scrollAmount = random.nextInt(20) - 10;
+                if (scrollAmount != 0) {
+                    robot.mouseWheel(scrollAmount);
+                }
+
+                Thread.sleep(30000);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
